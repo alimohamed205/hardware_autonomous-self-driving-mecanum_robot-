@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="navstack_pub">
+  <link name="base_footprint"/>
+  <joint name="base_link_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.12"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+  
+  
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0209148482469032 0.00353141324278033 -0.0152111359569568"
+        rpy="0 0 0" />
+      <mass
+        value="4.18823858430197" />
+      <inertia
+        ixx="0.0163959812788391"
+        ixy="2.18210912296025E-08"
+        ixz="-6.53592108618589E-07"
+        iyy="0.0454692904330769"
+        iyz="-1.31603476826795E-07"
+        izz="0.0580306179732299" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="bl_wheel_link">
+    <inertial>
+      <origin
+        xyz="1.02695629777827E-15 -0.0302856529808955 -1.3235940121703E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.270243648121361" />
+      <inertia
+        ixx="8.01495437608353E-05"
+        ixy="-2.87447743312358E-19"
+        ixz="-2.59118436935907E-19"
+        iyy="0.000108364789370441"
+        iyz="-4.61089444048629E-19"
+        izz="8.01495437608351E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/bl_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/bl_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl_joint"
+    type="continuous">
+    <origin
+      xyz="-0.20031 0.16715 -0.061704"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bl_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="fl_Link">
+    <inertial>
+      <origin
+        xyz="6.31716901011714E-14 -0.0302843531608482 -6.54172896408234E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.270243648121361" />
+      <inertia
+        ixx="8.01495437608282E-05"
+        ixy="4.67072560291564E-18"
+        ixz="-1.27262734535066E-18"
+        iyy="0.000108364789370431"
+        iyz="4.35014061301399E-18"
+        izz="8.01495437608269E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/fl_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/fl_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.2759 0.16715 -0.061704"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="fr_link">
+    <inertial>
+      <origin
+        xyz="-9.43689570931383E-16 -0.0329287351623224 -1.66967134562768E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.295407208718009" />
+      <inertia
+        ixx="8.51383526485942E-05"
+        ixy="1.51396614954498E-19"
+        ixz="8.41226575085333E-20"
+        iyy="0.000115483256500183"
+        iyz="3.65970224311431E-19"
+        izz="8.51383526485939E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/fr_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/fr_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.2759 -0.16715 -0.061704"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="br_link">
+    <inertial>
+      <origin
+        xyz="-4.9960036108132E-16 -0.0302761236696991 -9.98333360424652E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.270243648121361" />
+      <inertia
+        ixx="8.01495437608317E-05"
+        ixy="1.8673608367527E-18"
+        ixz="-2.18251885518867E-18"
+        iyy="0.000108364789370434"
+        iyz="-1.14231160922193E-18"
+        izz="8.01495437608275E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/br_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://navstack_pub/meshes/br_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br_joint_wheel"
+    type="continuous">
+    <origin
+      xyz="-0.20031 -0.16715 -0.061704"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="br_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  
+  <link name="laser">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14"/>
+      <geometry>
+        <mesh filename="package://navstack_pub/meshes/lds.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+
+     <inertial>
+      <mass value="0.114" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+               iyy="0.001" iyz="0.0"
+               izz="0.001" />
+    </inertial>
+  </link>
+  
+  <joint name="scan_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="0.290 0 0.1" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="laser"/>
+  </joint>
+  
+</robot>

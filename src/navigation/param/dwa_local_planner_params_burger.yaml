@@ -1,0 +1,46 @@
+DWAPlannerROS:
+
+  # Robot Configuration Parameters
+  max_vel_x: 1.22
+  min_vel_x: -0.1
+
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+
+  max_vel_trans: 1.62  # Maximum translational velocity (m/s)
+  min_vel_trans: 01.11  # Minimum translational velocity (m/s)
+
+  max_vel_theta: 2.75  # Maximum rotational velocity (rad/s)
+  min_vel_theta: 1.37  # Minimum rotational velocity (rad/s)
+
+  acc_lim_x: 2.5  # Maximum acceleration limit in x-direction (m/s^2)
+  acc_lim_y: 2.5  # Maximum acceleration limit in y-direction (m/s^2)
+  acc_lim_theta: 3.2  # Maximum acceleration limit in rotational direction (rad/s^2)
+
+  # Goal Tolerance Parameters
+  xy_goal_tolerance: 0.05  # Tolerance in xy-goal position (m)
+  yaw_goal_tolerance: 0.17  # Tolerance in yaw-goal orientation (rad)
+  latch_xy_goal_tolerance: false  # If true, robot has to be within xy_goal_tolerance for goal completion
+
+  # Forward Simulation Parameters
+  sim_time: 0.1   # Time to predict forward for trajectory simulations (s)
+  vx_samples: 3  # Number of samples in x-velocity space
+  vy_samples: 10   # Number of samples in y-velocity space
+  vth_samples: 20  # Number of samples in rotational velocity space
+  # controller_frequency: 10.0  # Frequency of the controller loop (Hz)
+
+  # Trajectory Scoring Parameters
+  # path_distance_bias: 32.0  # Weight for how much it should stick to the global path
+  # goal_distance_bias: 20.0  # Weight for how much it should attempt to reach the goal
+  # occdist_scale: 0.02  # Weight for how much the trajectory is penalized for being close to obstacles
+  # forward_point_distance: 0.325  # Distance from the robot to the point on the path that is considered
+  # stop_time_buffer: 0.2  # Buffer time added to the end of a trajectory to ensure that the robot stops
+  # scaling_speed: 0.25  # How fast the speed can be changed
+  # max_scaling_factor: 2.0  # Maximum scaling factor for the velocity
+
+  # # Oscillation Prevention Parameters
+  # oscillation_reset_dist: 0.05  # Distance the robot must travel before oscillation flags are reset
+
+  # # Debugging
+  # publish_traj_pc: true  # Publish the trajectory point cloud for visualization
+  # publish_cost_grid_pc: true  # Publish the cost grid point cloud for visualization

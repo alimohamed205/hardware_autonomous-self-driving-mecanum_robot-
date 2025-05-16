@@ -1,0 +1,2 @@
+i2c_device_ros:localization:mpu_6050_driver:navigation
+-DCATKIN_DEVEL_PREFIX=/home/jetson/project_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jetson/project_ws/install -G Unix Makefiles
