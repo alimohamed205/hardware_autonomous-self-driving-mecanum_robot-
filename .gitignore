@@ -1,6 +1,6 @@
-/home/luka/project_ws/src/i2c_device_ros/package.xml
-/home/luka/project_ws/src/localization/package.xml
-/home/luka/project_ws/src/mpu_6050_driver/package.xml
-/home/luka/project_ws/src/mpu_6050_driver/CMakeLists.txt
-/home/luka/project_ws/src/navigation/package.xml
-/home/luka/project_ws/src/navigation/CMakeLists.txt
+
+*package.xml
+
+*CMakeLists.txt
+
+
