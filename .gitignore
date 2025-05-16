@@ -1,6 +1,41 @@
+# ============ ROS Build Files ============
+build/
+devel/
+install/
+log/
 
-*package.xml
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*.so
 
-*CMakeLists.txt
+# ============ C++ ============
+*.o
+*.obj
+*.so
+*.a
+*.out
+*.exe
 
+# ============ CMake ============
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# ============ Editors / IDEs ============
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ============ OS Files ============
+.DS_Store
+Thumbs.db
+
+# ============ Launch/Debug Logs ============
+*.log
+*.launch.*
+*.world.*
 
